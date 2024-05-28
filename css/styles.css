@@ -1,17 +1,365 @@
+/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body, button, input, select, textarea, a {
+body, button, input, select, textarea, a, label {
   font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: large;
+  color: rgb(11, 11, 177);
 }
-body{
+body {
   background-color: #f7f7f7;
 }
 
+/* HEADER */
+header {
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+}
+header #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+}
+header #navbar .nav-brand img {
+  width: 130px;
+  height: 50px;
+}
+header #navbar .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+header #navbar .nav-list .nav-item a:hover {
+  color: #777;
+  transition: 0.3s;
+}
+header #navbar .hamburger-menu {
+  display: none;
+}
 
+/* FOOTER */
+.footer {
+  background-color: #cecece7a;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand-login {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.social-icons {
+  display: flex;
+}
+.social-icon {
+  font-size: 24px;
+  margin-left: 10px;
+}
 
+/* FOOTER-SECTION-COPYRIGHT */
+.footer-section{
+  border-top: 1px solid #dcdcdc;
+  padding: 40px 0 10px;
+}
 
+.footer-section-copyright{
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  gap: 20px;
+  padding: 40px 0;
+}
 
+.footer-copyright-text {
+  display: grid;
+  align-items: center;
+  grid-gap: 0 20px;
+  grid-template-columns: 50px 1fr;
+}
 
+.footer-copyright-text p{
+  width: 100%;
+  font-size: .6875rem;
+  line-height: 1.35;
+  font-weight: 300;
+  color: #717171;
+  margin: 0;
+}
+
+.footer-company-copyright{
+  text-align: center;
+}
+
+.footer-company-info{
+  text-align: center;
+}
+
+/* MAIN */
+main {
+  margin-top: 0rem;
+}
+main #banner {
+  position: relative;
+  background-image: url('https://desafiosesucesso.com.br/wp-content/uploads/2022/02/trabalhos-autonomos.png');
+  background-size: cover;
+  background-position: center;
+  color: rgb(11, 11, 177);
+  padding: 6rem 2rem;
+}
+main #banner .banner-content {
+  position: relative;
+  z-index: 1;
+}
+main #banner .banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+main #banner .banner-content .banner-content-title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+main #banner .banner-content .banner-content-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 500px;
+  margin-bottom: 38px;
+  background-color: #f7f7f7ab;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 8px 24px;
+}
+main #banner .banner-content .banner-content-btn {
+  background-color: rgb(11, 11, 177);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 8px 24px;
+  border: none;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* SECTION POSTS */
+section#posts {
+  margin-top: 0px;
+  background-color: #f7f7f7;
+}
+#posts .posts-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#posts .posts-content .posts-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+#posts .posts-content .posts-content-header .section-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+#posts .posts-content .posts-content-header .view-all-link {
+  text-decoration: none;
+  color: #00a8cc;
+}
+#posts .posts-content .posts-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+#posts .posts-content .posts-cards .post-card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+#posts .posts-content .posts-cards .post-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+#posts .posts-content .posts-cards .post-card a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  display: block;
+  text-align: center;
+}
+
+/* SECTION LOGIN */
+#posts-login {
+  margin-top: 0px;
+  background-color: #f7f7f7;
+  position: static;
+  background-image: url('https://desafiosesucesso.com.br/wp-content/uploads/2022/02/trabalhos-autonomos.png');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  font-size: large;
+  font-weight: 700;
+}
+#posts-login .posts-content-login {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#posts-login .posts-content-login .posts-content-header-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+#posts-login .posts-content-login .posts-content-header-login .section-title-login {
+  font-size: 22px;
+  font-weight: 500;
+}
+#posts-login .posts-content-login .posts-cards-login {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+#posts-login .posts-content-login .posts-cards-login .post-card-login {
+  background-color: #ffffffbb;
+  padding: 54px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#posts-login .posts-content-login .posts-cards-login .post-card-login h3 {
+  font-size: 30px;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 17px;
+  text-align: center;
+}
+#posts-login .posts-content-login .posts-cards-login .post-card-login span {
+  font-size: 21px;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 5px;
+}
+#posts-login .posts-content-login .posts-cards-login .post-card-login input {
+  font-size: 30px;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 5px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.281);
+}
+#posts-login .posts-content-login .posts-cards-login .banner-content-btn-login {
+  background-color: rgb(11, 11, 177);
+  color: white;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 8px 24px;
+  border: none;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* SECTION CADASTRO */
+#cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  background-color: #f7f7f7;
+  position: static;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  font-size: large;
+  font-weight: 700;
+}
+#cadastro .form-cadastro h1 {
+  text-align: center;
+}
+.form-cadastro {
+  background-color: #ffffffbb;
+  padding: 54px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#cadastro form {
+  gap: 10px;
+  background-color: #ffffffbb;
+  padding: 54px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  margin: 70px 120px;
+  font-size: 700;
+}
+.form-group {
+  flex: 0 0 calc(48% - 10px);
+  margin-bottom: 20px;
+}
+label {
+  align-self: center;
+  margin: 0 auto;
+  text-align: center;
+}
+input, textarea, select, option {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.281);
+}
+.banner-content-btn-cadastro {
+  background-color: rgb(11, 11, 177);
+  color: white;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 8px 24px;
+  border: none;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .form-group {
+    flex: 0 0 100%;
+  }
+}
